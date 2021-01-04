@@ -5,10 +5,8 @@ export const Applink = {
 export const PlayerBody = {
   backgroundColor: "#282c34",
   minHeight: "90vh",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: "calc(10px + 2vmin)",
-  color: "white",
+  display: "grid",
+  gridTemplateColumns: "1fr 4fr",
+  gridGap: "6px",
+  padding: "26px 26px 0px 26px",
 };
