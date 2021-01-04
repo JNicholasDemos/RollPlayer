@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app/containers/App/App";
 import reportWebVitals from "./reportWebVitals";
+import Providers from "./providers/Providers";
 import { jsx, css, Global } from "@emotion/react";
 
 ReactDOM.render(
@@ -37,7 +38,9 @@ ReactDOM.render(
         },
       }}
     />
-    <App />
+    <Providers>
+      <App />
+    </Providers>
   </React.StrictMode>,
   document.getElementById("root")
 );

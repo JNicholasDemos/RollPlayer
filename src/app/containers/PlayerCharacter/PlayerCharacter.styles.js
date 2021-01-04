@@ -1,10 +1,10 @@
-export const App = {
-  textAlign: "center",
+export const Applink = {
+  color: "#61dafb",
 };
 
-export const Appheader = {
-  backgroundColor: "grey",
-  minHeight: "10vh",
+export const PlayerBody = {
+  backgroundColor: "#282c34",
+  minHeight: "90vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

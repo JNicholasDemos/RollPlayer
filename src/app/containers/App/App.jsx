@@ -1,29 +1,28 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import logo from "./logo.svg";
-import "./App.styles.js";
 import { jsx, css } from "@emotion/react";
 import * as styles from "./App.styles";
+import React, { Suspense, lazy } from "react";
+import { withRouter, Route, Switch } from "react-router-dom";
+import Spinner from "../../components/Spinner/Spinner";
 
-function App() {
+const PlayerCharacterView = lazy(() =>
+  import("../PlayerCharacter/PlayerCharacter")
+);
+
+const App = () => {
   return (
     <div css={styles.App}>
-      <header css={styles.Appheader}>
-        <img src={logo} css={styles.Applogo} alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          css={styles.Applink}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="header" css={styles.Appheader}></div>
+      <Suspense fallback={<Spinner />}>
+        <Switch>
+          <Route path={["/", "/pc/"]}>
+            <PlayerCharacterView />
+          </Route>
+        </Switch>
+      </Suspense>
     </div>
   );
-}
+};
 
-export default App;
+export default withRouter(App);
