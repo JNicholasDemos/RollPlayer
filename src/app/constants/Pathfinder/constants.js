@@ -29,7 +29,7 @@ export const classTypes = {
   WIZARD: "wizard",
 };
 
-export const skillTypes = [
+/*
   {
     name: "",
     dependentAttribute: "",
@@ -37,10 +37,11 @@ export const skillTypes = [
     armorPenalty: false,
     availableClasses: [],
   },
+*/
+export const skillTypes = [
   {
     name: "Acrobatics",
     dependentAttribute: attributeTypes.DEXTERITY,
-    classSkill: false,
     untrained: true,
     armorPenalty: true,
     availableClasses: [
